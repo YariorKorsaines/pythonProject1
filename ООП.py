@@ -63,9 +63,10 @@ class Mentor:
         self.courses_attached = []
 
 
+
 class Lecturer(Mentor):
-    def __init__(self, name, surname):
-        super().__init__(name, surname)
+    def __init__(self, name, surname, lecturer):
+        super().__init__(name, surname, lecturer)
         self.student_feedback = {}
 
     def average_feedback(self):
@@ -118,68 +119,68 @@ class Reviewer(Mentor):
         return round(sum(list_st) / len(list_st), 1)
 
 
-    academically_successful_student_1 = Student('Name_student_1', 'Surname_student_1', 'your_gender')
-    academically_successful_student_2 = Student('Name_student_2', 'Surname_student_2', 'your_gender')
+academically_successful_student_1 = Student('Name_student_1', 'Surname_student_1', 'your_gender')
+academically_successful_student_2 = Student('Name_student_2', 'Surname_student_2', 'your_gender')
 
-    academically_successful_student_1.courses_in_progress += ['Python']
-    academically_successful_student_2.courses_in_progress += ['Python']
-    academically_successful_student_1.courses_in_progress += ['GIT']
-    academically_successful_student_2.courses_in_progress += ['GIT']
+academically_successful_student_1.courses_in_progress += ['Python']
+academically_successful_student_2.courses_in_progress += ['Python']
+academically_successful_student_1.courses_in_progress += ['GIT']
+academically_successful_student_2.courses_in_progress += ['GIT']
 
-    academically_successful_student_1.finished_courses += ['Введение в программирование']
-    academically_successful_student_1.finished_courses += ['Введение в программирование']
+academically_successful_student_1.finished_courses += ['Введение в программирование']
+academically_successful_student_1.finished_courses += ['Введение в программирование']
 
-    homework_check_1 = Reviewer("Name_reviewer_1", "Surname_reviewer_1")
-    homework_check_2 = Reviewer("Name_reviewer_2", "Surname_reviewer_2")
+homework_check_1 = Reviewer("Name_reviewer_1", "Surname_reviewer_1")
+homework_check_2 = Reviewer("Name_reviewer_2", "Surname_reviewer_2")
 
-    homework_check_1.courses_attached += ['Python']
-    homework_check_1.courses_attached += ['GIT']
-    homework_check_2.courses_attached += ['Python']
-    homework_check_2.courses_attached += ['GIT']
+homework_check_1.courses_attached += ['Python']
+homework_check_1.courses_attached += ['GIT']
+homework_check_2.courses_attached += ['Python']
+homework_check_2.courses_attached += ['GIT']
 
-    homework_check_1.rate_hw(academically_successful_student_1, 'Python', 10)
-    homework_check_1.rate_hw(academically_successful_student_1, 'Python', 7)
-    homework_check_2.rate_hw(academically_successful_student_2, 'Python', 10)
-    homework_check_2.rate_hw(academically_successful_student_2, 'Python', 5)
-    homework_check_1.rate_hw(academically_successful_student_1, 'GIT', 10)
-    homework_check_1.rate_hw(academically_successful_student_1, 'GIT', 9)
-    homework_check_2.rate_hw(academically_successful_student_2, 'GIT', 10)
-    homework_check_2.rate_hw(academically_successful_student_2, 'GIT', 8)
+homework_check_1.rate_hw(academically_successful_student_1, 'Python', 10)
+homework_check_1.rate_hw(academically_successful_student_1, 'Python', 7)
+homework_check_2.rate_hw(academically_successful_student_2, 'Python', 10)
+homework_check_2.rate_hw(academically_successful_student_2, 'Python', 5)
+homework_check_1.rate_hw(academically_successful_student_1, 'GIT', 10)
+homework_check_1.rate_hw(academically_successful_student_1, 'GIT', 9)
+homework_check_2.rate_hw(academically_successful_student_2, 'GIT', 10)
+homework_check_2.rate_hw(academically_successful_student_2, 'GIT', 8)
 
-    lector_course_1 = Lecturer('Name_lecturer_1', 'Surname_lecturer_1')
-    lector_course_2 = Lecturer('Name_lecturer_2', 'Surname_lecturer_2')
+lector_course_1 = Lecturer('Name_lecturer_1', 'Surname_lecturer_1')
+lector_course_2 = Lecturer('Name_lecturer_2', 'Surname_lecturer_2')
 
-    lector_course_1.courses_attached += ['Python']
-    lector_course_1.courses_attached += ['GIT']
-    lector_course_2.courses_attached += ['Python']
-    lector_course_2.courses_attached += ['GIT']
-
-
-    academically_successful_student_1.teaching_assessment(lector_course_1, "Python", 10)
-    academically_successful_student_2.teaching_assessment(lector_course_1, "Python", 8)
-    academically_successful_student_1.teaching_assessment(lector_course_1, "GIT", 6)
-    academically_successful_student_1.teaching_assessment(lector_course_1, "Python", 7)
-    academically_successful_student_2.teaching_assessment(lector_course_2, "Python", 5)
-    academically_successful_student_1.teaching_assessment(lector_course_2, "GIT", 7)
-    academically_successful_student_1.teaching_assessment(lector_course_2, "Python", 8)
-    academically_successful_student_2.teaching_assessment(lector_course_2, "GIT", 9)
+lector_course_1.courses_attached += ['Python']
+lector_course_1.courses_attached += ['GIT']
+lector_course_2.courses_attached += ['Python']
+lector_course_2.courses_attached += ['GIT']
 
 
-    print(f"{'=' * 80}\n'Задание № 2.'")
-    print(f"\n{academically_successful_student_1.grades}")
-    print(f"\n{lector_course_1.student_feedback}")
-    print(f"\n{'=' * 80}\n'Задание № 3.'")
-    print(f"\n{homework_check_1}")
-    print(f"\n{lector_course_1}")
-    print(f"\n{academically_successful_student_1}")
+academically_successful_student_1.teaching_assessment(lector_course_1, "Python", 10)
+academically_successful_student_2.teaching_assessment(lector_course_1, "Python", 8)
+academically_successful_student_1.teaching_assessment(lector_course_1, "GIT", 6)
+academically_successful_student_1.teaching_assessment(lector_course_1, "Python", 7)
+academically_successful_student_2.teaching_assessment(lector_course_2, "Python", 5)
+academically_successful_student_1.teaching_assessment(lector_course_2, "GIT", 7)
+academically_successful_student_1.teaching_assessment(lector_course_2, "Python", 8)
+academically_successful_student_2.teaching_assessment(lector_course_2, "GIT", 9)
 
-    print(academically_successful_student_1 < lector_course_1)
-    print(academically_successful_student_1 > lector_course_1)
 
-    print(f"\n{'=' * 80}\n'Задание № 4.'")
-    course = "GIT"
-    print(average_student_grade(course, academically_successful_student_1, academically_successful_student_2))
-    print(average_feedback_lectures(course, lector_course_1, lector_course_2))
+print(f"{'=' * 80}\n'Задание № 2.'")
+print(f"\n{academically_successful_student_1.grades}")
+print(f"\n{lector_course_1.student_feedback}")
+print(f"\n{'=' * 80}\n'Задание № 3.'")
+print(f"\n{homework_check_1}")
+print(f"\n{lector_course_1}")
+print(f"\n{academically_successful_student_1}")
+
+print(academically_successful_student_1 < lector_course_1)
+print(academically_successful_student_1 > lector_course_1)
+
+print(f"\n{'=' * 80}\n'Задание № 4.'")
+course = "GIT"
+print(average_student_grade(course, academically_successful_student_1, academically_successful_student_2))
+print(average_feedback_lectures(course, lector_course_1, lector_course_2))
 
 
 
