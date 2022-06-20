@@ -66,17 +66,18 @@ class Mentor:
 
 
 class Lecturer(Mentor):
-    def __init__(self, name, surname, lecturer):
-        super().__init__(name, surname, lecturer)
+    def __init__(self, name, surname):
+        super().__init__(name, surname)
         self.student_feedback = {}
         self.student_assessment = {}
+        self.lector_course = {}
 
 
     def average_feedback(self):
         average_feedback_list = []
         for key, value in self.student_feedback.items():
             average_feedback_list += value
-        mean = round((sum(average_feedback_list) / len(average_feedback_list)), 1)
+        mean = round((sum(average_feedback_list)/len(average_feedback_list)), 1)
         return mean
 
     def __str__(self):
