@@ -6,6 +6,7 @@ class Student:
         self.finished_courses = []
         self.courses_in_progress = []
         self.grades = {}
+        self.student_assessment = {}
 
     def teaching_assessment(self, lecturer, course, grade):
         if isinstance(lecturer, Lecturer) and course in self.courses_in_progress and course and lecturer.courses_attached:
@@ -68,6 +69,8 @@ class Lecturer(Mentor):
     def __init__(self, name, surname, lecturer):
         super().__init__(name, surname, lecturer)
         self.student_feedback = {}
+        self.student_assessment = {}
+
 
     def average_feedback(self):
         average_feedback_list = []
