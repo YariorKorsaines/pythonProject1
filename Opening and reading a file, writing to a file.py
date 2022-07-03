@@ -54,11 +54,11 @@ def rewriting(file_for_writing: str, base_path, location):
         opening_files.close()
 
 if __name__ == '__main__':
-    file_with_recipes = 'C:\Users\ЯРОСЛАВ-ПК\PycharmProjects\Recipes.txt'
+    file_with_recipes = 'C:/Users/ЯРОСЛАВ-ПК/PycharmProjects/Recipes.txt'
     dishes = ['Омлет', 'Фахитос', 'Сельдь под шубой', 'Запеченный картофель']
     pprint(reading_of_catalog(file_with_recipes))
     print(list_of_stores_with_ingredients(dishes, 2, reading_of_catalog(file_with_recipes)))
-    file_for_writing = 'C:\Users\ЯРОСЛАВ-ПК\PycharmProjects\Result.txt'
+    file_for_writing = 'C:/Users/ЯРОСЛАВ-ПК/PycharmProjects/Result.txt'
     base_path = os.getcwd()
     location = 'txts_for_Opening and reading a file, writing to a file'
     rewriting(file_for_writing, base_path, location)
