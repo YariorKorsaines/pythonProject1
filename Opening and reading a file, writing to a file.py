@@ -1,4 +1,4 @@
-import os
+import os.path
 from pprint import pprint
 
 
@@ -39,8 +39,9 @@ def list_of_stores_with_ingredients(dishes: list, person_count: int, cook_book: 
 
 
 def rewriting(file_for_writing: str, base_path, location):
-    files = [[strings_counting(os.path.join(base_path, location, i)), os.path.join(base_path, location, i), i]
-             for i in list(os.listdir(os.path.join(base_path, location)))]
+    files = []
+    for i in list(os.listdir(os.path.join(base_path, location))):
+        files.append([strings_counting(os.path.join(base_path, location, i)), os.path.join(base_path, location, i), i])
     for file_from_list in sorted(files):
         opening_files = open(file_for_writing, 'a')
         opening_files.write(f'{file_from_list[2]}\n')
@@ -54,15 +55,14 @@ def rewriting(file_for_writing: str, base_path, location):
         opening_files.close()
 
 if __name__ == '__main__':
-    file_with_recipes = 'C:/Users/ЯРОСЛАВ-ПК/PycharmProjects/Recipes.txt'
+    file_with_recipes = os.path.abspath("C:\\Users\\ЯРОСЛАВ-ПК\\PycharmProjects\\pythonProject6\\Recipe.txt")
     dishes = ['Омлет', 'Фахитос', 'Сельдь под шубой', 'Запеченный картофель']
     pprint(reading_of_catalog(file_with_recipes))
     print(list_of_stores_with_ingredients(dishes, 2, reading_of_catalog(file_with_recipes)))
-    file_for_writing = 'C:/Users/ЯРОСЛАВ-ПК/PycharmProjects/Result.txt'
+    file_for_writing = os.path.abspath(C:\\Users\\ЯРОСЛАВ-ПК\\PycharmProjects\\pythonProject6\\Result.txt")
     base_path = os.getcwd()
-    location = 'txts_for_Opening and reading a file, writing to a file'
+    location = os.path.abspath("C:\\Users\\ЯРОСЛАВ-ПК\\PycharmProjects\\pythonProject6\\txts_for_Opening and reading a file, writing to a file")
     rewriting(file_for_writing, base_path, location)
-
 
 
 
