@@ -1,0 +1,24 @@
+2.txt
+1
+line in № 1 in file 2.txt : The alarm began at thirteen hours zero two minutes.
+1.txt
+8
+line in № 1 in file 1.txt : Police officer
+line in № 2 in file 1.txt : personally called the sixteenth precinct. And after one minute thirty seconds
+line in № 3 in file 1.txt : bells rang out in the duty room and other rooms on the lower floor
+line in № 4 in file 1.txt :       When Jensen, commissar of the sixteenth precinct, got out of his
+line in № 5 in file 1.txt : office, the calls have not yet ceased. Jensen was a middle-aged man, of an ordinary
+line in № 6 in file 1.txt : build, with a flat and inexpressive face. On the last step of the screw
+line in № 7 in file 1.txt : He paused up the stairs and glanced around the duty room. Then corrected
+line in № 8 in file 1.txt : tie and proceeded to the car.
+3.txt
+9
+line in № 1 in file 3.txt : At this time of day, the cars flowed in a continuous brilliant stream, and among
+line in № 2 in file 3.txt : buildings rose like columns of concrete and glass. Here in the world
+line in № 3 in file 3.txt : sharp edges, people on the sidewalks looked miserable and restless.
+line in № 4 in file 3.txt : They were well dressed, but somehow surprisingly similar to each other and everything before
+line in № 5 in file 3.txt : one was in a hurry. They walked in discordant strings, spilled widely, seeing
+line in № 6 in file 3.txt : a red traffic light, or the metallic sheen of cafe machines. They incessantly
+line in № 7 in file 3.txt : looked around and fiddled with briefcases and handbags.
+line in № 8 in file 3.txt :      Police cars with their sirens on made their way through this
+line in № 9 in file 3.txt : crowd.

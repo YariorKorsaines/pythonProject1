@@ -1,0 +1,26 @@
+Omelette
+3
+Egg | 2 | PCS
+Milk | 100 | ml
+Tomato | 2 | PCS
+
+Peking Duck
+4
+Duck | 1 | PCS
+Water | 2 | l
+Honey | 3 | st.l
+Soy sauce | 60 | ml
+
+Baked potato
+3
+Potatoes | 1 | kg
+Garlic | 3 | gear
+Gouda cheese | 100 | G
+
+Fajitas
+5
+Beef | 500 | G
+Sweet pepper | 1 | PCS
+Lavash | 2 | PCS
+Wine vinegar | 1 | st.l
+Tomato | 2 | PCS
